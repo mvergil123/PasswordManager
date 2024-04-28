@@ -55,3 +55,4 @@ bool PasswordManager :: passwordApproved(string){
     }
     return false;
 }
+

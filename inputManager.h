@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 
-int getInputNumber(std::string output);
+int getInputNumber(std::string output, int numberOfChoices);
+std::string getUserInput(std::string output);
 
 #endif

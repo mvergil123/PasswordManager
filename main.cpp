@@ -7,6 +7,7 @@
 #include <string>
 #include <iostream> // for output 
 #include <sstream>
+#include <limits>
 #include "inputManager.h"
 
 using namespace std;
@@ -15,17 +16,6 @@ using namespace std;
 int main(){
 
     system("clear"); // clear the screen
-    std::stringstream ss;
-
-    ss << "test" << ", please select a security question: " << endl;
-    ss << " " << endl;
-    ss << "Your input: "; // get the number of the question they want
-
-    cout << ss.str();
-    auto selection = getInputNumber(ss.str());
-
-    cout << "The slection is " << selection << endl;
-    return 0;
 
     // read through the security questions file
     ifstream questionsFile;
