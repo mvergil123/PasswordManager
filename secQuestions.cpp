@@ -10,7 +10,7 @@
 
 using namespace std;
 
-void promptQuestions(const vector<string>& QUESTIONS, int& questionChoice, const string& NAME, string& answer) {
+void promptQuestions(const vector<string>& QUESTIONS, const string& NAME, string& answer) {
     system("clear"); // clear the screen
 
     cout << NAME << ", please select a security question: " << endl;

@@ -27,6 +27,7 @@ int getInputNumber(std::string output, int numberOfChoices) {
             return number;
         }
     } while (isSelectionBad);
+    return -1;
 }
 
 std::string getUserInput(std::string output) {

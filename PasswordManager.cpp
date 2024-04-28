@@ -4,6 +4,13 @@
 #include <string>
 #include <iostream>
 
+#include <iostream>
+#include <string>
+#include "cryptopp/aes.h"
+#include "cryptopp/filters.h"
+#include "cryptopp/modes.h"
+#include "cryptopp/osrng.h"
+#include "cryptopp/hex.h"
 
 using namespace std;
 
@@ -17,6 +24,34 @@ void PasswordManager :: encrypt(){ // encrypts the password
     // encrypt password
     // append it to the encrypted passwords vector
     // encryptedPasswords.push_back(PasswordtoEncrypt);
+    using namespace CryptoPP;
+
+    AutoSeededRandomPool prng;
+
+    SecByteBlock key(AES::DEFAULT_KEYLENGTH);
+    prng.GenerateBlock(key, key.size());
+
+    CryptoPP::byte iv[AES::BLOCKSIZE];
+
+    prng.GenerateBlock(iv, sizeof(iv));
+
+    std::string plaintext = "Hello, World!";
+    std::string ciphertext;
+    std::string decryptedtext;
+
+    // Encrypt
+    try {
+        CBC_Mode<AES>::Encryption encryptor(key, key.size(), iv);
+        StringSource(plaintext, true,
+                     new StreamTransformationFilter(encryptor,
+                                                    new StringSink(ciphertext)
+                     ) // StreamTransformationFilter
+        ); // StringSource
+    }
+    catch (const CryptoPP::Exception& e) {
+        std::cerr << "Encryption Error: " << e.what() << std::endl;
+    }
+    
 }
 
 void PasswordManager :: decrypt(const int& PASSWORDIDX) { // decrypts the requested password
