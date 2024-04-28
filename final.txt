@@ -1,0 +1,7 @@
+TITLE: Include your name, your CSCI 200 section, and a project title.
+PROBLEM DESCRIPTION: This is the one-paragraph description of your project (from the Problem Proposal) with any necessary changes or updates.
+PROGRAM DOCUMENTATION: This section includes a brief description of how to run your program (i.e., what the user should type and any other information a user might need to know - such as if it needs to be built with SFML ) and also a brief description that might be used by another programmer to modify/extend your program. For example, there may be some features that you would have included in your program if you had more time. You could include a list of those features, with any thoughts you had about how they should be implemented. Be sure to mention what, if anything, changed from your original proposal and why those changes were necessary.
+CLASS DESCRIPTION: What was your custom class you created? What data and functionality was encapsulated? How did creating the class help the struture of your program?
+LIST DATA STRUCTURE: Which list data structure did you choose to use? Why was this structure chosen? How did it apply to the task at hand?
+FILE I/O: Where was File I/O incorporated? Why was it necessary to the context of your program?
+REFLECTIONS: Include at least a one-paragraph description of what you learned from this project. It might help to think about what problems you encountered, and what you would do differently if you had to do another project.
