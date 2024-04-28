@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  cpp:
+    build: .
+    volumes:
+      - .:/app
+    working_dir: /app
+    command:
+      - sleep
+      - "10000"
